@@ -27,6 +27,7 @@ css:
       - ['header', 'color', '#fff']
       - ['header h1']
       - ['nav ul', 'font-size', '1.125rem']
+      - ['nav a', 'white-space', 'nowrap']
       - ['nav a:hover', 'background-color', '#6c8fe0']
       - ['nav a:hover', 'color', '#fff']
     search:
