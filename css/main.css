@@ -66,7 +66,7 @@ nav a:hover {
 }
 
 a {
-  padding: .3em
+  padding: .3em;
 }
 
 li a {
@@ -101,7 +101,7 @@ li:last-child {
 
 }
 
-@@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60em) {
 
   html {
     font-size: 120%;
@@ -119,6 +119,25 @@ li:last-child {
 
   ul li {
     float: left;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+    line-height: 1.5;
+  }
+
+  ul {
+    float: right;
+  }
+
+  ul li {
+    width: auto;
+    padding-left: .7em;
+    padding-right: .7em;
   }
 
 }
