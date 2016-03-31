@@ -37,3 +37,53 @@ header h1 {
   padding-top: .5em;
   padding-bottom: .5em;
 }
+
+nav {
+  background-color: #18294f;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding-left: .5em;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+
+nav a {
+  white-space: nowrap;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #6c8fe0;
+  color: #fff;
+}
+
+a {
+  padding: .3em
+}
+
+li a {
+  text-decoration: none;
+  color: #6c8fe0;
+}
+
+li:last-child {
+  padding-bottom: .7em;
+}
+
+@media only screen and (min-width: 25em) {
+
+  ul li {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+
+}
