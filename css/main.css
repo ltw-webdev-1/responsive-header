@@ -87,3 +87,16 @@ li:last-child {
   }
 
 }
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  ul li {
+    width: 25%;
+  }
+
+}
