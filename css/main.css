@@ -100,3 +100,25 @@ li:last-child {
   }
 
 }
+
+@@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  h1 {
+    float: left;
+    padding-left: .4em;
+  }
+
+  nav {
+    padding: 1.3em;
+  }
+
+  ul li {
+    float: left;
+  }
+
+}
