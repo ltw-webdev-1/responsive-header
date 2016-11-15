@@ -1,10 +1,14 @@
 repo: "responsive-header"
-canvasCourse: "467502"
-canvasAssignment: "4177784"
+canvasCourse: "web-dev-1"
 
 naming: true
-commits: 2
+restrictFileTypes: true
 liveWebsite: true
+
+git:
+  numCommits: 2
+  allCommitted: true
+  allSynced: true
 
 html:
   - path: "index.html"
@@ -30,6 +34,11 @@ css:
       - ['nav a', 'white-space', 'nowrap']
       - ['nav a:hover', 'background-color', '#6c8fe0']
       - ['nav a:hover', 'color', '#fff']
+      - ['@38em', 'html', 'font-size', '110%']
+      - ['@38em', 'html', 'line-height', '1.4']
+      - ['@60em', 'html', 'font-size', '120%']
+      - ['@60em', 'html', 'line-height', '1.5']
+      - ['@90em', 'html', 'font-size', '130%']
     search:
       - '@-moz-viewport'
       - '@-ms-viewport'
@@ -37,20 +46,12 @@ css:
       - '@-webkit-viewport'
       - '@viewport'
       - '@media only screen and \(min-width: 25em\) \{'
-      - '@media only screen and \(min-width: 38em\) \{'
-      - '@media only screen and \(min-width: 60em\) \{'
-      - '@media only screen and \(min-width: 90em\) \{'
-      - 'font\-size\: 110%'
-      - 'font\-size\: 120%'
-      - 'font\-size\: 130%'
-      - 'line\-height\: 1\.4'
-      - 'line\-height\: 1\.5'
       - 'float\: left'
       - 'float\: right'
       - 'overflow\: hidden'
       - 'width\: 50\%'
       - 'width\: 25\%'
-    search_not:
+    searchNot:
       - ['@media.+\(.*max-width', 'Media queries with `max-width` should not be used — use `min-width` instead']
       - ['@media.+\(.*px', 'Pixel units should not be used in media queries — use `em` instead']
       - ['font-size\s*:\s*.+px', 'Pixel units should not be used for `font-size` — use `rem` instead']
@@ -59,3 +60,15 @@ css:
 screenshots:
   - path: "index.html"
     sizes: [320, 400, 650, 980, 1400]
+
+functionality:
+  - path: 'index.html'
+    tests:
+      - |
+        let link = $('nav a');
+        let oldBg = css(link).backgroundColor;
+
+        hover('nav a', function () {
+          if (css(link).backgroundColor == oldBg) fail('The background colour of the navigation links don’t change when hovered')
+          pass();
+        });
