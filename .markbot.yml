@@ -1,14 +1,16 @@
 repo: "responsive-header"
 canvasCourse: "web-dev-1"
 
-naming: true
-restrictFileTypes: true
-liveWebsite: true
-
-git:
-  numCommits: 2
-  allCommitted: true
-  allSynced: true
+inherit:
+  - naming-restrict-live
+  - git-2
+  - css
+  - body-margin-0
+  - border-box
+  - responsive-css
+  - responsive-font-sizes
+  - screenshots-all
+  - nav-hover
 
 html:
   - path: "index.html"
@@ -19,14 +21,7 @@ css:
     valid: true
     bestPractices: true
     has:
-      - ['html', 'box-sizing', 'border-box']
-      - ['html', 'text-size-adjust', '100%']
-      - ['html', '-moz-text-size-adjust', '100%']
-      - ['html', '-ms-text-size-adjust', '100%']
-      - ['html', '-webkit-text-size-adjust', '100%']
       - ['html', 'font', 'normal 100%/1.3 Ubuntu, sans-serif']
-      - ['*', 'box-sizing', 'inherit']
-      - ['body', 'margin', '0']
       - ['header', 'background-color', '#18294f']
       - ['header', 'color', '#fff']
       - ['header h1']
@@ -34,41 +29,10 @@ css:
       - ['nav a', 'white-space', 'nowrap']
       - ['nav a:hover', 'background-color', '#6c8fe0']
       - ['nav a:hover', 'color', '#fff']
-      - ['@38em', 'html', 'font-size', '110%']
-      - ['@38em', 'html', 'line-height', '1.4']
-      - ['@60em', 'html', 'font-size', '120%']
-      - ['@60em', 'html', 'line-height', '1.5']
-      - ['@90em', 'html', 'font-size', '130%']
+      - ['@25']
     search:
-      - '@-moz-viewport'
-      - '@-ms-viewport'
-      - '@-o-viewport'
-      - '@-webkit-viewport'
-      - '@viewport'
-      - '@media only screen and \(min-width: 25em\) \{'
       - 'float\: left'
       - 'float\: right'
       - 'overflow\: hidden'
       - 'width\: 50\%'
       - 'width\: 25\%'
-    searchNot:
-      - ['@media.+\(.*max-width', 'Media queries with `max-width` should not be used — use `min-width` instead']
-      - ['@media.+\(.*px', 'Pixel units should not be used in media queries — use `em` instead']
-      - ['font-size\s*:\s*.+px', 'Pixel units should not be used for `font-size` — use `rem` instead']
-      - ['line-height\s*:\s*.+(px|rem|em)', 'Line heights should not have units']
-
-screenshots:
-  - path: "index.html"
-    sizes: [320, 400, 650, 980, 1400]
-
-functionality:
-  - path: 'index.html'
-    tests:
-      - |
-        let link = $('nav a');
-        let oldBg = css(link).backgroundColor;
-
-        hover('nav a', function () {
-          if (css(link).backgroundColor == oldBg) fail('The background colour of the navigation links don’t change when hovered')
-          pass();
-        });
