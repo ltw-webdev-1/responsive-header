@@ -18,7 +18,7 @@ deliverables: '1 HTML file, 1 CSS file'
 
 ## Details
 
-- *Typefaces:* `Ubuntu`
+- *Typefaces:* `Ubuntu` (regular, bold)
 - *Text sizes:* `2rem`, `1.125rem`
 - *Colours:* `#fff`, `#18294f`, `#6c8fe0`
 - *Paddings:* `5px`, `.3em 0 .5em`, `.5em .75em`, `.75rem`
