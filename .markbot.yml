@@ -32,7 +32,6 @@ css:
       - ['@25']
     search:
       - 'display: flex'
-      - 'flex-direction: row'
       - 'justify-content:'
       - 'align-items:'
       - 'flex-wrap:'
